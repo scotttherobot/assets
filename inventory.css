@@ -19,6 +19,7 @@ body{
 	border: 1px solid black;
 }
 .search span{
+	text-align: center;
 	background: #749595;
 	font-size: 2em;
 	width: 100%;

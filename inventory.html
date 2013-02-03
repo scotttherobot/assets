@@ -1,5 +1,5 @@
 <head>
-  <title>inventory</title>
+  <title>Assets</title>
 </head>
 
 <body>
@@ -12,9 +12,9 @@
 
 <template name="search">
 	<div class="search">
-		<span> Inventory </span>
+		<span> Assets </span>
 		<form action="javascript:void(0)">
-			<input type="text" id="search">
+			<input type="text" id="search" placeholder="asset id">
 			<button type="submit">Search!</button>
 			<button type="button" id="clear">Clear</button>
 			<button type="button" id="new">New Item</button>
@@ -43,8 +43,8 @@
 </template>
 <template name="insert">
 	{{#if showNew}}
-	<div class="search">
-		<span>Insert</span>
+	<div class="item">
+		<span>Add an Asset</span>
 		<form action="javascript:void(0)">
 		<input type="text" id="name" placeholder="item title"><br>
 		<input type="text" id="id" placeholder="item id"><br>
