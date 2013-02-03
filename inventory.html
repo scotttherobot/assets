@@ -1,0 +1,56 @@
+<head>
+  <title>inventory</title>
+</head>
+
+<body>
+<div id="col">
+	{{> search}}
+	{{> items}}
+	{{> insert}}
+</div>
+</body>
+
+<template name="search">
+	<div class="search">
+		<span> Inventory </span>
+		<form action="javascript:void(0)">
+			<input type="text" id="search">
+			<button type="submit">Search!</button>
+			<button type="button" id="clear">Clear</button>
+			<button type="button" id="new">New Item</button>
+			<button type="button" id="edit">Edit Items</button>
+		</form>
+	</div>
+</template>
+<template name="items">
+	{{#if showItems}}
+	{{#each item}}
+		{{> item}}
+	{{/each}}
+	{{/if}}
+</template>
+<template name="item">
+	<div class="item">	
+		<span>{{name}}
+		{{#if edit}}
+		<button type="button" id="remove">delete</button>
+		{{/if}}
+		</span>
+		<h4>{{id}}</h4>
+		<p>{{description}}</p>
+		
+	</div>
+</template>
+<template name="insert">
+	{{#if showNew}}
+	<div class="search">
+		<span>Insert</span>
+		<form action="javascript:void(0)">
+		<input type="text" id="name" placeholder="item title"><br>
+		<input type="text" id="id" placeholder="item id"><br>
+		<textarea id="desc" placeholder="item description"></textarea><br>
+		<button type="button" id="add">Create!</button>
+		</form>
+	</div>
+	{{/if}}
+</template>
